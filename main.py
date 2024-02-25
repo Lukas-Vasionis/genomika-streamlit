@@ -4,6 +4,18 @@ from lib import text_utils as tu
 # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config(page_title="Genomika", page_icon="img/genomika_logo_trim.ico", layout="centered")
 
+background_color = "white"
+css = f"""
+<style>
+    .stApp {{
+        background-color: {background_color};
+    }}
+</style>
+"""
+
+# Inject CSS with markdown
+st.markdown(css, unsafe_allow_html=True)
+
 with st.container():
     svg_render.render_svg(svg_string=svg_render.load_to_svg_string("img/GenomikaLogo (1).svg"))
 
