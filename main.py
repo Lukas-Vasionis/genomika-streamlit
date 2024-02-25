@@ -2,7 +2,7 @@ import streamlit as st
 from lib import svg_render
 from lib import text_utils as tu
 # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
-st.set_page_config(page_title="Streamlit", page_icon="img/genomika_logo_trim.ico", layout="centered")
+st.set_page_config(page_title="Genomika", page_icon="img/genomika_logo_trim.ico", layout="centered")
 
 with st.container():
     svg_render.render_svg(svg_string=svg_render.load_to_svg_string("img/GenomikaLogo (1).svg"))
@@ -36,8 +36,8 @@ with c3:
         'center',
         font="Source Sans Pro").get_text(html_class="H5")
     tu.DisTx(
-    "Help us decode the oldest data storage system!🕵️‍♂️<br>"
-    "Join us at <a href='info@genomika.lt'>info@genomika.lt</a>.",
+    "Help us decode the oldest data storage system!🕵️‍♂️<br><br>"
+    "Join us at <span style='color: blue; text-decoration: underline; cursor: pointer;'>info@genomika.lt</span><br><br>",
     font="Source Sans Pro",
     align='center').get_text(html_class="div")
 
